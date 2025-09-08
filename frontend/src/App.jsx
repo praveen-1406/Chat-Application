@@ -12,9 +12,11 @@ import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./store/useThemeStore";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
 
   const { theme, } = useThemeStore();
+
+  console.log("online users:",{onlineUsers})
 
   //   React’s rules of hooks say:
   //  Put everything you reference inside useEffect into the dependency array.
